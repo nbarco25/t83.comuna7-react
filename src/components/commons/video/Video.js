@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import videoPath1 from '../../../../src/capitulo1.mp4';
-import videoPath2 from '../../../../src/capitulo2.mp4';
+import videoPath1 from '../../../videos/capitulo1.mp4';
+import videoPath2 from '../../../videos/capitulo2.mp4';
+import videoPath3 from '../../../videos/capitulo3.mp4';
+import './Video.css'
 
 const Video = () => {
   const [videoUrl, setVideoUrl] = useState(videoPath1);
   const chapters = [
-    { name: 'Capítulo 1', url: videoPath1 },
-    { name: 'Capítulo 2', url: videoPath2 },
+    { name: 'Construcción barrios', url: videoPath1 },
+    { name: 'Líderes sociales I', url: videoPath2 },
+    { name: 'Líderes sociales II', url: videoPath3 },
   ];
 
   const handleChapterClick = (chapterUrl) => {
@@ -19,9 +22,10 @@ const Video = () => {
       <ReactPlayer
         className="react-player"
         controls
+        playing
         url={videoUrl}
         width="100%"
-        height="90%"
+        height="110%"
       />
       <div className="chapter-buttons">
         {chapters.map((chapter) => (

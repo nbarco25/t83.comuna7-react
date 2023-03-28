@@ -1,0 +1,20 @@
+{
+    "videos": [
+      {
+        "id": 1,
+        "title": "Construcción barrios",
+        "path": "../../../../src/capitulo1.mp4"
+      },
+      {
+        "id": 2,
+        "title": "Líderes sociales I",
+        "path": "../../../../src/capitulo2.mp4"
+      },
+      {
+        "id":3,
+        "title": "Líderes sociales II",
+        "path": "../../../../src/capitulo3.mp4"
+      }
+    ]
+  }
+  

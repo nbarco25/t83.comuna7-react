@@ -82,8 +82,10 @@ nav {
 @media (max-width: 640px) {
     .menu {
         display: block;
+        width: 20px;
+        padding-left: 5px;
     }
-
+  
     .navbar-center ul {
         display: none;
     }

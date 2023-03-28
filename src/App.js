@@ -10,7 +10,7 @@ function App() {
 
     <div>
       <Header>
-        <Menu/>  
+        <Menu></Menu>
       </Header>
       <Video/>
     </div>
