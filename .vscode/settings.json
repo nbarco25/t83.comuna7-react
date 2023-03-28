@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 1,
+    "editor.cursorStyle": "block",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+}
