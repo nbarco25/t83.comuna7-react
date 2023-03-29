@@ -1,13 +1,12 @@
 import React from 'react'
 import './Header.css';
 
+
 const Header = () => {
     return (
         <nav>
-            <img src="./icon_menu.svg" alt="menu" className="menu"/>
-
             <a className='logo' href="/">
-                <span>T83 COMUNA 7 POPAYÁN</span>
+                <img src='./Logo200px.png' alt='logo'/>
             </a>
             <div className="navbar-center">
                 <ul>

@@ -25,7 +25,7 @@ const Video = () => {
         playing
         url={videoUrl}
         width="100%"
-        height="110%"
+        height="-1%"
       />
       <div className="chapter-buttons">
         {chapters.map((chapter) => (
