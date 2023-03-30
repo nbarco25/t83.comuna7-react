@@ -48,8 +48,6 @@ nav {
     object-fit: cover;
 }
 
-
-
 .navbar-center {
     display: flex;
     margin-left:-20px;
@@ -65,8 +63,7 @@ nav {
     margin: 10px;
     text-decoration: none; 
     color: var(--white);
-    padding: 0;
-
+    padding-left: 130px;
 }
 
 
@@ -84,6 +81,13 @@ nav {
     display: flex;
     align-items: center;
     height: 40px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 100px;
 }
 
 @media (max-width: 640px) {

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css';
-
+import { Social } from '../social/Social.js';
+import { Menu } from '../menu/Menu';
 
 const Header = () => {
     return (
@@ -9,17 +10,13 @@ const Header = () => {
                 <img src='./Logo200px.png' alt='logo'/>
             </a>
             <div className="navbar-center">
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/">Episodios</a></li>
-                    <li><a href="/">Proyectos</a></li>
-                    <li><a href="/">Créditos</a></li>
-                </ul>
+               <Menu/>
             </div>
-            <div className="navbar-left-social">
-                
+            <div className="navbar-right">
+                <Social/>
             </div>
         </nav>
+        
  
     )
 }

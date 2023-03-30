@@ -1,0 +1,27 @@
+/*align social component to the right*/
+.social-media {
+    z-index: 1;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+}
+
+.instagram img {
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+    
+}
+.facebook img {
+    margin: 3px;
+    height: 35px;
+    width: 35px;
+    
+}
+.twitter img {
+    margin: 3px;
+    height: 35px;
+    width: 35px;
+    
+}
