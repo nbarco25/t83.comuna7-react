@@ -19,15 +19,7 @@ body {
   /*I don't want to do scroll in the page*/
 
 }
-.chapter-buttons {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-}
+
 
 
 .App-header {

@@ -8,9 +8,9 @@ import './Video.css'
 const Video = () => {
   const [videoUrl, setVideoUrl] = useState(videoPath1);
   const chapters = [
-    { name: 'Construcción barrios', url: videoPath1 },
-    { name: 'Líderes sociales I', url: videoPath2 },
-    { name: 'Líderes sociales II', url: videoPath3 },
+    { name: 'Construcción barrios', url: videoPath1, image: process.env.PUBLIC_URL + '/logo200px.png' },
+    { name: 'Líderes sociales I', url: videoPath2, image: process.env.PUBLIC_URL + '/logo200px.png' },
+    { name: 'Líderes sociales II', url: videoPath3, image: process.env.PUBLIC_URL + '/logo200px.png' },
   ];
 
   const handleChapterClick = (chapterUrl) => {
@@ -29,9 +29,13 @@ const Video = () => {
       />
       <div className="chapter-buttons">
         {chapters.map((chapter) => (
-          <button key={chapter.name} onClick={() => handleChapterClick(chapter.url)}>
-            {chapter.name}
-          </button>
+          
+          <img
+            key={chapter.name}
+            src={chapter.image}
+            alt={chapter.name}
+            onClick={() => handleChapterClick(chapter.url)}
+          />
         ))}
       </div>
     </div>
