@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
+import intropath from '../../../videos/introvideo.mp4'
 import videoPath1 from '../../../videos/capitulo1.mp4';
 import videoPath2 from '../../../videos/capitulo2.mp4';
 import videoPath3 from '../../../videos/capitulo3.mp4';
+import videoPath4 from '../../../videos/capitulo4.mp4';
+import videoPath5 from '../../../videos/capitulo5.mp4';
+
 import './Video.css'
 
 const Video = () => {
-  const [videoUrl, setVideoUrl] = useState(videoPath1);
+  const [videoUrl, setVideoUrl] = useState(intropath);
+  const [showImages, setShowImages] = useState(true);
   const chapters = [
-    { name: 'Construcción barrios', url: videoPath1, image: process.env.PUBLIC_URL + '/logo200px.png' },
-    { name: 'Líderes sociales I', url: videoPath2, image: process.env.PUBLIC_URL + '/logo200px.png' },
-    { name: 'Líderes sociales II', url: videoPath3, image: process.env.PUBLIC_URL + '/logo200px.png' },
+    { name: 'Pop 31 de marzo', url: videoPath1, image: './cap1.png'},
+    { name: 'Construcción de barriosI', url: videoPath2, image: './cap2.png' },
+    { name: 'Líderes sociales II', url: videoPath3, image: './cap3.png' },
+    { name: 'Construcción de barriosI', url: videoPath4, image: './cap4.png' },
+    { name: 'Mujeres lucha y esperanza', url: videoPath5, image: './cap5.png' },
+    { name: 'Intro', style: {display: 'none', top: '0px', left: '0px'} },
   ];
 
   const handleChapterClick = (chapterUrl) => {
+    setShowImages(false);
     setVideoUrl(chapterUrl);
   };
+
+  const handleVideoEnded = () => {
+    setShowImages(true);
+  }
 
   return (
     <div className="player-wrapper">
@@ -26,14 +39,16 @@ const Video = () => {
         url={videoUrl}
         width="100%"
         height="-1%"
+        onEnded={handleVideoEnded}
       />
       <div className="chapter-buttons">
-        {chapters.map((chapter) => (
-          
+        {showImages && chapters.map((chapter) => (
           <img
+            className="chapter-button"
             key={chapter.name}
             src={chapter.image}
             alt={chapter.name}
+            style={chapter.style}
             onClick={() => handleChapterClick(chapter.url)}
           />
         ))}

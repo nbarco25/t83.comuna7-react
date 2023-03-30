@@ -1,7 +1,8 @@
 .player-wrapper{
-    position: relative;
-    padding-top: 50.25%;
+  position: relative;
+  padding-top: 50.25%;
 }
+
 .chapter-buttons {
   position: absolute;
   z-index: 1;
@@ -10,6 +11,60 @@
   display: flex;
   gap: 10px;
   padding: 10px;
-  height: 50px;
-
+  height: 10%;
 }
+
+.chapter-buttons img:nth-of-type(1) {
+  position: absolute;
+  height: 100%;
+  left: 40vw;
+  top: 5vw;
+}
+
+.chapter-buttons img:nth-of-type(2) {
+  position: absolute;
+  height: 100%;
+  left: 10vw;
+  top: 300%;
+}
+
+.chapter-buttons img:nth-of-type(3) {
+  position: absolute;
+  height: 100%;
+  left: 10vw;
+  top: 33vw;
+}
+
+.chapter-buttons img:nth-of-type(4) {
+  position: absolute;
+  height: 100%;
+  left: 70vw;
+  top: 32vw;
+}
+
+.chapter-buttons img:nth-of-type(5) {
+  position: absolute;
+  height: 100%;
+  left: 70vw;
+  top: 16vw;
+}
+
+.chapter-button:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0,0) rotate(0deg); }
+  10% { transform: translate(-2px, -2px) rotate(-2deg); }
+  20% { transform: translate(-2px, 2px) rotate(2deg); }
+  30% { transform: translate(2px, -2px) rotate(2deg); }
+  40% { transform: translate(2px, 2px) rotate(-2deg); }
+  50% { transform: translate(-2px, -2px) rotate(-2deg); }
+  60% { transform: translate(-2px, 2px) rotate(2deg); }
+  70% { transform: translate(2px, -2px) rotate(2deg); }
+  80% { transform: translate(2px, 2px) rotate(-2deg); }
+  90% { transform: translate(-2px, -2px) rotate(-2deg); }
+  100% { transform: translate(-2px, 2px) rotate(0deg); }
+}
+
