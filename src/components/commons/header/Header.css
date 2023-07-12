@@ -26,6 +26,7 @@ nav {
     font-weight: bold;
     font-size: var(--sm);
     letter-spacing: 0.2em;
+    background: linear-gradient(45deg, var(--brown-color) 20%, var(--purple-color) 100%);
     /*position: sticky;*/
 }
 
@@ -50,8 +51,8 @@ nav {
 
 .navbar-center {
     display: flex;
-    margin-left:-20px;
     align-items: center;
+
 }
 
 .navbar-center ul{
@@ -60,10 +61,9 @@ nav {
 
 .navbar-center ul li a,
 .navbar-right ul li a {
-    margin: 10px;
+    margin: 50px;
     text-decoration: none; 
     color: var(--white);
-    padding-left: 130px;
 }
 
 

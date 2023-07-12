@@ -1,12 +1,13 @@
 import React, { useState, useRef } from 'react';
 import ReactPlayer from 'react-player';
-import intropath from '../../../videos/introvideo.mp4'
-import videoPath1 from '../../../videos/capitulo1.mp4';
-import videoPath2 from '../../../videos/capitulo2.mp4';
-import videoPath3 from '../../../videos/capitulo3.mp4';
-import videoPath4 from '../../../videos/capitulo4.mp4';
-import videoPath5 from '../../../videos/capitulo5.mp4';
+import intropath from '../../../data/videos/introvideo.mp4'
+import videoPath1 from '../../../data/videos/capitulo1.mp4';
+import videoPath2 from '../../../data/videos/capitulo2.mp4';
+import videoPath3 from '../../../data/videos/capitulo3.mp4';
+import videoPath4 from '../../../data/videos/capitulo4.mp4';
+import videoPath5 from '../../../data/videos/capitulo5.mp4';
 import './Video.css'
+import { useNavigate } from 'react-router-dom';
 
 const sonidoPath = `${process.env.PUBLIC_URL}/audiohover.mp3`;
 const Video = () => {
@@ -32,13 +33,21 @@ const Video = () => {
   const handleVideoEnded = () => {
     setShowImages(true);
   }
-  
+
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+      navigate(-1);
+  };
+
   return (
     <div className="player-wrapper">
       <ReactPlayer
         className="react-player"
         controls
         playing
+        muted
+        loop={true}
         url={videoUrl}
         width="100%"
         height="-1%"
@@ -58,6 +67,7 @@ const Video = () => {
           />
         ))}
       </div>
+      <button onClick={handleBackClick}>Regresar</button>
       <audio ref={audioRef} src={sonidoPath} />
     </div>
   );
