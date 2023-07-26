@@ -10,13 +10,12 @@
     --lg: 18px;
   }
 
-
 nav {
+    overflow: visible;
     display: flex;
     top: 0;
     width: 100%;
     height: 43px;
-    z-index: 100;
     justify-content: space-between;
     padding: 0px;
     background-color: var(--brown-color);
@@ -26,12 +25,7 @@ nav {
     font-weight: bold;
     font-size: var(--sm);
     letter-spacing: 0.2em;
-    background: linear-gradient(45deg, var(--brown-color) 20%, var(--purple-color) 100%);
-    /*position: sticky;*/
-}
-
-.menu {
-    display: none;
+    background: linear-gradient(to right, var(--brown-color), var(--purple-color));
 }
 
 .logo {
@@ -40,7 +34,6 @@ nav {
     height: 40px;
     margin-top: 4px;
     margin-left:20px;
-    z-index: 2;
 }
 
 .logo img {
@@ -50,26 +43,22 @@ nav {
 }
 
 .navbar-center {
+    position: relative;
     display: flex;
     align-items: center;
-
-}
-
-.navbar-center ul{
-    display: flex;
-}
+    z-index: 9999; /* Asegúrate de que el contenedor del menú tenga un z-index alto */
+  }
 
 .navbar-center ul li a,
 .navbar-right ul li a {
     margin: 50px;
     text-decoration: none; 
     color: var(--white);
-}
 
+}
 
 .navbar-center ul li a:hover,
 .navbar-right ul li a:hover {
-   border-radius: 8px;
    color: var(--main-orange-color);
 }
 
@@ -80,15 +69,8 @@ nav {
     margin: 0;
     display: flex;
     align-items: center;
-    height: 40px;
 }
 
-.navbar-right {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    margin-left: 100px;
-}
 
 @media (max-width: 640px) {
     .menu {
@@ -102,3 +84,4 @@ nav {
     }
 
 }
+

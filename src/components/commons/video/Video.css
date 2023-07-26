@@ -1,66 +1,92 @@
-.player-wrapper{
-  position: relative;
-  padding-top: 50.25%;
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .chapter-buttons {
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
-  display: flex;
-  gap: 10px;
+  top: 50%; /* Position the chapter buttons container in the vertical center */
+  left: 50%; /* Position the chapter buttons container in the horizontal center */
+  transform: translate(-50%, -50%); /* Center the container itself */
+  display: grid;
+  gap: 5px;
   padding: 10px;
-  height: 10%;
 }
 
-.chapter-buttons img:nth-of-type(1) {
-  position: absolute;
+.chapter-button {
+  /* Add styling for the chapter buttons as needed */
+  width: 100%;
   height: 100%;
-  left: 40vw;
-  top: 5vw;
 }
 
-.chapter-buttons img:nth-of-type(2) {
-  position: absolute;
-  height: 100%;
-  left: 10vw;
-  top: 300%;
+.chapter-button:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+  top: 20px;
 }
 
-.chapter-buttons img:nth-of-type(3) {
-  position: absolute;
-  height: 100%;
-  left: 10vw;
-  top: 33vw;
+.chapter-button:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 3;
 }
 
-.chapter-buttons img:nth-of-type(4) {
-  position: absolute;
-  height: 100%;
-  left: 70vw;
-  top: 32vw;
+.chapter-button:nth-child(3) {
+  grid-area: 1 / 3 / 2 / 4;
 }
 
-.chapter-buttons img:nth-of-type(5) {
+.chapter-button:nth-child(4) {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.logo-container {
   position: absolute;
-  height: 100%;
-  left: 70vw;
-  top: 16vw;
+  top: 50%; /* Position the logo container in the vertical center */
+  left: 50%; /* Position the logo container in the horizontal center */
+  transform: translate(-50%, -50%); /* Center the container itself */
+}
+
+.logo-centro {
+  /* Add styling for the logo as needed */
+  width: 100px;
+  height: 100px;
 }
 
 
-.chapter-buttons img:nth-of-type(6) {
+.chapter-button:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0,0) rotate(0deg); }
+  10% { transform: translate(-2px, -2px) rotate(-2deg); }
+  20% { transform: translate(-2px, 2px) rotate(2deg); }
+  30% { transform: translate(2px, -2px) rotate(2deg); }
+  40% { transform: translate(2px, 2px) rotate(-2deg); }
+  50% { transform: translate(-2px, -2px) rotate(-2deg); }
+  60% { transform: translate(-2px, 2px) rotate(2deg); }
+  70% { transform: translate(2px, -2px) rotate(2deg); }
+  80% { transform: translate(2px, 2px) rotate(-2deg); }
+  90% { transform: translate(-2px, -2px) rotate(-2deg); }
+  100% { transform: translate(-2px, 2px) rotate(0deg); }
+}
+
+audio {
+  display: none;
+}
+
+.logo-container {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo-centro{
+  width: 100%;
   height: 200%;
-  left: 35vw;
-  top: 20vw;
-  animation: shake 0s;
-}
-
-.chapter-buttons img:nth-of-type(6):hover {
-  /*change Opacity*/
-  opacity: 0.5;
+  max-width: 100%;
 }
 
 .chapter-button:hover {

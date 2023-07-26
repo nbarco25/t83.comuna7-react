@@ -19,7 +19,6 @@ const Video = () => {
     { name: 'Líderes sociales II', url: videoPath3, image: './cap3.png' },
     { name: 'Construcción de barriosI', url: videoPath4, image: './cap4.png' },
     { name: 'Mujeres lucha y esperanza', url: videoPath5, image: './cap5.png' },
-    { name: 'logo centro', url:videoPath1 , image: './Logo200px.png' },
     { name: 'Intro', style: {display: 'none', top: '0px', left: '0px'} },
   ];
 
@@ -41,7 +40,7 @@ const Video = () => {
   };
 
   return (
-    <div className="player-wrapper">
+    <div className="player-wrapper container">
       <ReactPlayer
         className="react-player"
         controls
@@ -50,13 +49,15 @@ const Video = () => {
         loop={true}
         url={videoUrl}
         width="100%"
-        height="-1%"
+        height="100%" /* Use 100% height to cover the whole container */
         onEnded={handleVideoEnded}
       />
+
+      {/* Chapter Buttons */}
       <div className="chapter-buttons">
         {showImages && chapters.map((chapter) => (
           <img
-            className="chapter-button"
+            className="chapter-button item"
             key={chapter.name}
             src={chapter.image}
             alt={chapter.name}
@@ -67,10 +68,16 @@ const Video = () => {
           />
         ))}
       </div>
-      <button onClick={handleBackClick}>Regresar</button>
+
+      {/* Logo Container */}
+      {showImages && (
+        <div className="logo-container">
+          <img className="logo-centro" src="./Logo200px.png" alt="logo centro" />
+        </div>
+      )}
+
       <audio ref={audioRef} src={sonidoPath} />
     </div>
   );
 };
-
 export { Video };
