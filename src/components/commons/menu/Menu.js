@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Menu.css';
+import { Link } from 'react-router-dom';
+
 
 const Menu = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -23,9 +25,9 @@ const Menu = () => {
         <a href="/">Extensiones</a>
         {/* Menú desplegable */}
         <ul id="dropdown-menu">
-          <li><a href="/">Podcast</a></li>
-          <li><a href="/">Fotografía</a></li>
-          <li><a href="/">Pinturas</a></li>
+          <li><Link to="/podcast">Podcast</Link></li>
+          <li><Link to="/fotografia">Fotografia</Link></li>
+          <li><Link to="/pintura">Pintura</Link></li>
         </ul>
       </li>
       <li><a href="/">Créditos</a></li>
