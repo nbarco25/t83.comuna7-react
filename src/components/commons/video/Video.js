@@ -7,6 +7,7 @@ import videoPath3 from '../../../data/videos/capitulo3.mp4';
 import videoPath4 from '../../../data/videos/capitulo4.mp4';
 import videoPath5 from '../../../data/videos/capitulo5.mp4';
 import './Video.css'
+
 import { useNavigate } from 'react-router-dom';
 
 const sonidoPath = `${process.env.PUBLIC_URL}/audiohover.mp3`;

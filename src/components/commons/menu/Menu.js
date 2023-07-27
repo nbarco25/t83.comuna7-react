@@ -8,26 +8,21 @@ const Menu = () => {
     setShowDropdown(true);
   };
 
-  const handleDropdownMouseLeave = () => {
+  const handleMenuMouseLeave = () => {
     setShowDropdown(false);
   };
 
   return (
-    <ul
-      className={`menu ${showDropdown ? 'open' : ''}`}
-    >
+    <ul className={`menu ${showDropdown ? 'open' : ''}`} onMouseLeave={handleMenuMouseLeave}>
       <li><a href="/">Inicio</a></li>
       <li><a href="/">Episodios</a></li>
-      <li className={`dropdown ${showDropdown ? 'open' : ''}`}>
-        <a
-          href="/"
-          onMouseEnter={handleDropdownMouseEnter}
-          onMouseLeave={handleDropdownMouseLeave}
-        >
-          Extensiones
-        </a>
+      <li
+        className={`dropdown ${showDropdown ? 'open' : ''}`}
+        onMouseEnter={handleDropdownMouseEnter}
+      >
+        <a href="/">Extensiones</a>
         {/* Menú desplegable */}
-        <ul>
+        <ul id="dropdown-menu">
           <li><a href="/">Podcast</a></li>
           <li><a href="/">Fotografía</a></li>
           <li><a href="/">Pinturas</a></li>

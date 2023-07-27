@@ -1,5 +1,5 @@
 .dropdown {
-    position: relative;
+    /* position: relative; */
     display: inline-block;
 }
 
@@ -15,8 +15,24 @@
     border-radius: 0 0 10px 10px;
 }
 
+/* Flecha hacia abajo cuando el menú está cerrado */
+.dropdown::before {
+  content: "";
+  display: inline-block;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(45deg) translateY(-2px);
+  margin-right: 8px;
+}
+
+/* Flecha hacia arriba cuando el menú está abierto */
+.dropdown.open::before {
+  transform: rotate(-135deg) translateY(2px);
+}
+
 .dropdown ul li {
-    list-style: none;
+    list-style: none; 
 }
 
 .dropdown ul li a {
@@ -33,6 +49,6 @@
 
 /* Estilos para los enlaces del menú desplegable */
 .menu .dropdown-content li a:hover {
-  color: var(--second-orange-color); /* Cambiar el fondo al hacer hover */
+  color: var(--second-orange-color); 
 }
-  
+
