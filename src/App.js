@@ -7,6 +7,7 @@ import Podcast from './components/commons/podcast/Podcast.js';
 import Fotografia from './components/commons/fotografia/fotografia.js';
 import Pintura from './components/commons/pintura/pintura.js';
 import ComicViewer from './components/commons/comics/comic';
+<script src="http://localhost:8097"></script>
 
 function App() {
   return (
@@ -22,5 +23,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

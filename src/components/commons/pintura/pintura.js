@@ -2,23 +2,18 @@ import React from 'react';
 import './pintura.css';
 import ModalImage from 'react-modal-image';
 
-// Importa las imágenes desde tu carpeta de imágenes
-import img1 from '../../../img/pinturas_jpg/image00002.jpeg';
-import img2 from '../../../img/pinturas_jpg/image00003.jpeg';
-import img3 from '../../../img/pinturas_jpg/image00004.jpeg';
-import img4 from '../../../img/pinturas_jpg/image00005.jpeg';
-import img5 from '../../../img/pinturas_jpg/image00006.jpeg';
-import img6 from '../../../img/pinturas_jpg/image00007.jpeg';
-import img7 from '../../../img/pinturas_jpg/image00008.jpeg';
-import img8 from '../../../img/pinturas_jpg/image00009.jpeg';
-import img9 from '../../../img/pinturas_jpg/image00010.jpeg';
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
 
-// Importa más imágenes aquí
+const images = importAll(require.context('../../../img/pinturas_jpg', false, /\.(png|jpe?g|svg)$/));
 
 const Pintura = () => {
-    // Podrías reemplazar este array con tus propias imágenes
-    const imagenes = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
-
+    // Utiliza las imágenes importadas
+    const imagenes = Object.values(images);
+    console.log(imagenes);
     return (
         <div className="pintura">
             <h1>Galería de Pinturas</h1>
