@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pintura.css';
+import './pintura.css';
 import ModalImage from 'react-modal-image';
 
 // Importa las imágenes desde tu carpeta de imágenes

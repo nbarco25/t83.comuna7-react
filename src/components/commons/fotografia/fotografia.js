@@ -1,5 +1,5 @@
 import React from 'react';
-import './Fotografia.css';
+import './fotografia.css';
 import ModalImage from 'react-modal-image';
 
 // Importa las imágenes desde tu carpeta de imágenes
