@@ -28,6 +28,7 @@ const Menu = () => {
           <li><Link to="/podcast">Podcast</Link></li>
           <li><Link to="/fotografia">Fotografia</Link></li>
           <li><Link to="/pintura">Pintura</Link></li>
+          <li><Link to="/comics">Cómics</Link></li>
         </ul>
       </li>
       <li><a href="/">Créditos</a></li>

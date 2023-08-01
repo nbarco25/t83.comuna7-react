@@ -6,6 +6,7 @@ import { Video } from './components/commons/video/Video.js'; // changed line
 import Podcast from './components/commons/podcast/Podcast.js';
 import Fotografia from './components/commons/fotografia/Fotografia.js';
 import Pintura from './components/commons/pintura/Pintura.js';
+import ComicViewer from './components/commons/comics/comic';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/podcast" element={<Podcast />} />
         <Route path="/fotografia" element={<Fotografia />} />
         <Route path="/pintura" element={<Pintura />} />
+        {<Route path="/comics" element={<ComicViewer />} /> }
         <Route path="/" element={<Video />} />
       </Routes>
     </Router>
