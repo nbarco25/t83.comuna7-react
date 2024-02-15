@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Ajusta la altura según tus necesidades */
+    height: 70vh; /* Ajusta la altura según tus necesidades */
 }
 
 .carousel-button {
@@ -31,4 +31,20 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    transition: opacity 0.5s ease-in-out; /* Define una transición en la opacidad */
+}
+
+.titulo-galeria {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #F28B0C;
+    
+}
+
+.descripcion-imagen {
+    color: white;
+    text-align: center !important;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #F2A007;
 }
