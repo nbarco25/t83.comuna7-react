@@ -26,6 +26,7 @@ nav {
     font-size: var(--sm);
     letter-spacing: 0.2em;
     background: linear-gradient(to right, var(--brown-color), var(--purple-color));
+    opacity: 90%;
 }
 
 .logo {
@@ -46,7 +47,7 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
-    z-index: 9999; /* Asegúrate de que el contenedor del menú tenga un z-index alto */
+    z-index: 9999;
   }
 
 .navbar-center ul li a,

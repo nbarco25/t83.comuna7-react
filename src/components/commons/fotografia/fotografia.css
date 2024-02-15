@@ -1,13 +1,34 @@
-.fotografias {
-    display: grid;  /* convierte el contenedor en un contenedor grid */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* crea tantas columnas como sea posible con un tamaño mínimo de 200px y un máximo de 1 fracción del espacio disponible */
-    grid-gap: 10px; /* agrega un espacio entre las imágenes */
-    width: 100%; /* asegura que la grilla se extienda a lo largo de todo el ancho de la pantalla */
-    height: 100vh; /* asegura que la grilla se extienda a lo largo de toda la altura de la pantalla */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ajusta la altura según tus necesidades */
 }
 
-.image-small {
-    width: 100%; /* asegura que cada imagen se extienda a lo largo de todo el ancho de su celda de grilla */
-    height: 100%; /* asegura que cada imagen se extienda a lo largo de toda la altura de su celda de grilla */
-    object-fit: cover; /* asegura que las imágenes cubran completamente su celda de grilla sin distorsionarse */
+.carousel-button {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-button:first-child {
+    left: 20px;
+}
+
+.carousel-button:last-child {
+    right: 20px;
+}
+
+.carousel-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
