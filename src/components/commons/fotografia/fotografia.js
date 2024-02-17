@@ -16,21 +16,21 @@ const Fotografia = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const nombres = [
         "Bella Maria Calucé",
-        "Andres (27 años)", 
+        "Andres", 
         "Blanca Nubia Escobar", 
         "Gabriela Rodríguez",
-        "Israel Zúñiga (72)",
+        "Israel Zúñiga",
         "Hipólita Uní",
         "Pedro Sánchez",
-        "Maria Fernanda Rodriguez (23 años)",
+        "Maria Fernanda Rodriguez",
         "Pedro Camacho",
-        "Danrley Kimo Cruz (24 años)", 
-        "Wilson Omen (27 años)", 
+        "Danrley Kimo Cruz", 
+        "Wilson Omen", 
         "Adolfo Omen", 
         "Luz Marina Pérez", 
         "Rosa María Chito", 
         "Luz Fanny Paz", 
-        "Erik Garcés (22 años)", 
+        "Erik Garcés", 
         "Andrea Guerrero Pino", 
         "Magnolia Pino", 
     ]
@@ -51,7 +51,7 @@ const Fotografia = () => {
         "Vive en el barrio el Mirador, llegó a este sector desde octubre del 2022, debido a la falta de empleo, decidió colocar un puesto de mango y chontaduro en el polideportivo de este lugar para vender junto a su madre.",
         "Nació en el barrio El Retiro Bajo, ya que, hace más de 30 años su abuela materna, se ganó un chance, con lo que pudo comprar un lote en el sector y construir su casa en ese lugar, donde actualmente vive con su familia. Actualmente estudia Licenciatura en Educación Física en la Universidad del Cauca. ",
         "Nació y creció en el bario El Mirador, es fisioterapeuta. Sus padres le han contado que ellos llegaron a invadir el lugar donde hoy está ubicada su casa, días después del terremoto ocurrido el 31 de marzo de 1983. Ahí construyeron en primer lugar un rancho, el cuál con el tiempo se convirtió en la casa que hoy en día habitan.",
-        "Nació y creció en el bario El Mirador, es fisioterapeuta. ⚕️Sus padres le han contado que ellos llegaron a invadir el lugar donde hoy está ubicada su casa, días después del terremoto ocurrido el 31 de marzo de 1983. Ahí construyeron en primer lugar un rancho, el cuál con el tiempo se convirtió en la casa que hoy en día habitan.",
+        "Nació y creció en el bario El Mirador, es fisioterapeuta. Sus padres le han contado que ellos llegaron a invadir el lugar donde hoy está ubicada su casa, días después del terremoto ocurrido el 31 de marzo de 1983. Ahí construyeron en primer lugar un rancho, el cuál con el tiempo se convirtió en la casa que hoy en día habitan.",
         "Llegó al barrio el Mirador 15 días después del terremoto, cuando su esposo ya había tomado un lote en este sector, actualmente viven ahí."
 
     ];
@@ -64,29 +64,28 @@ const Fotografia = () => {
         setCurrentIndex((prevIndex) => (prevIndex === imagenes.length - 1 ? 0 : prevIndex + 1));
     };
 
-   
-
     return (
         <div className="fotografia">
-            <br />
-            <h1 className="animated-spin mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl  dark:text-white titulo-galeria">{nombres[currentIndex]}</h1>
-            <div className="carousel-container">
-                <button className="carousel-button" onClick={previousImage}>
-                    <FontAwesomeIcon icon={faChevronLeft} />
-                </button>
+            <div className="imagen-columna">
+                <br/>
+                <div className="carousel-container">
+                    <button className="carousel-button" onClick={previousImage}>
+                        <FontAwesomeIcon icon={faChevronLeft} />
+                    </button>
                     <img
                         src={imagenes[currentIndex]}
                         alt={`Imagen ${currentIndex + 1}`}
                         className="carousel-image"
                     />
-                <button className="carousel-button" onClick={nextImage}>
-                    <FontAwesomeIcon icon={faChevronRight} />
-                </button>
-                
+                    <button className="carousel-button" onClick={nextImage}>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </button>
+                </div>
             </div>
-            <br />
-            <p className='descripcion-imagen'>{descriptions[currentIndex]}</p>
-
+            <div className="descripcion-columna">
+                <h1 className="font-extrabold md:text-5xl dark:text-white titulo-galeria">{nombres[currentIndex]}</h1>
+                <p className='descripcion-imagen'>{descriptions[currentIndex]}</p>
+            </div>
         </div>
     );
 };

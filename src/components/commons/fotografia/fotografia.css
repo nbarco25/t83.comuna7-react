@@ -1,8 +1,22 @@
+.fotografia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.imagen-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.descripcion-columna {
+    align-items: center;
+    justify-content: center;
+}
 .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh; /* Ajusta la altura según tus necesidades */
+    height: 80vh; /* Ajusta la altura según tus necesidades */
 }
 
 .carousel-button {
@@ -30,6 +44,7 @@
 .carousel-image {
     max-width: 100%;
     max-height: 100%;
+    margin-left: 90px;
     object-fit: contain;
     transition: opacity 0.5s ease-in-out; /* Define una transición en la opacidad */
     box-shadow: 0 4px 6px  #3F2773; /* Agrega una sombra suave */
@@ -38,7 +53,9 @@
 
 .titulo-galeria {
     text-align: center;
-    margin-bottom: 20px;
+    margin-right: 50%;
+    margin-top: 100px;
+    margin-bottom: 30px;
     color: transparent; /* Hace que el texto sea transparente */
     background-image: linear-gradient(to right, #3F2773, #F28B0C); /* Define el gradiente de color */
     -webkit-background-clip: text; /* Aplica el gradiente de color a las letras */
@@ -46,11 +63,10 @@
 }
 
 
-.descripcion-imagen {
+.descripcion-imagen { 
     color: white;
     text-align: center !important;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 50%;
     color: transparent; /* Hace que el texto sea transparente */
     background-image: linear-gradient(to right, #3F2773, #F28B0C); /* Define el gradiente de color */
     -webkit-background-clip: text; /* Aplica el gradiente de color a las letras */
