@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* Ajusta la altura según tus necesidades */
+    height: 60vh; /* Ajusta la altura según tus necesidades */
 }
 
 .carousel-button {
@@ -32,19 +32,27 @@
     max-height: 100%;
     object-fit: contain;
     transition: opacity 0.5s ease-in-out; /* Define una transición en la opacidad */
+    box-shadow: 0 4px 6px  #3F2773; /* Agrega una sombra suave */
+    border-radius: 10px; /* Agrega bordes redondeados */
 }
 
 .titulo-galeria {
     text-align: center;
     margin-bottom: 20px;
-    color: #F28B0C;
-    
+    color: transparent; /* Hace que el texto sea transparente */
+    background-image: linear-gradient(to right, #3F2773, #F28B0C); /* Define el gradiente de color */
+    -webkit-background-clip: text; /* Aplica el gradiente de color a las letras */
+    background-clip: text; /* Aplica el gradiente de color a las letras */
 }
+
 
 .descripcion-imagen {
     color: white;
     text-align: center !important;
     margin-left: 10%;
     margin-right: 10%;
-    color: #F2A007;
+    color: transparent; /* Hace que el texto sea transparente */
+    background-image: linear-gradient(to right, #3F2773, #F28B0C); /* Define el gradiente de color */
+    -webkit-background-clip: text; /* Aplica el gradiente de color a las letras */
+    background-clip: text; /* Aplica el gradiente de color a las letras */
 }

@@ -46,7 +46,6 @@ const Video = () => {
         className="react-player"
         controls
         playing
-        muted
         loop={true}
         url={videoUrl}
         width="100%"

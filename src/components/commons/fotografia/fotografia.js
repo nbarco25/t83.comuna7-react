@@ -68,8 +68,8 @@ const Fotografia = () => {
 
     return (
         <div className="fotografia">
-            <h1 className='titulo-galeria'>{nombres[currentIndex]}</h1>
-            
+            <br />
+            <h1 className="animated-spin mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl  dark:text-white titulo-galeria">{nombres[currentIndex]}</h1>
             <div className="carousel-container">
                 <button className="carousel-button" onClick={previousImage}>
                     <FontAwesomeIcon icon={faChevronLeft} />
@@ -84,6 +84,7 @@ const Fotografia = () => {
                 </button>
                 
             </div>
+            <br />
             <p className='descripcion-imagen'>{descriptions[currentIndex]}</p>
 
         </div>

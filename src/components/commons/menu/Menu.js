@@ -16,7 +16,7 @@ const Menu = () => {
 
   return (
     <ul className={`menu ${showDropdown ? 'open' : ''}`} onMouseLeave={handleMenuMouseLeave}>
-      <li><a href="/">Inicio</a></li>
+      <li><a href="/" >Inicio</a></li>
       <li><a href="/">Episodios</a></li>
       <li
         className={`dropdown ${showDropdown ? 'open' : ''}`}
@@ -25,7 +25,7 @@ const Menu = () => {
         <a href="/">Extensiones</a>
         {/* Menú desplegable */}
         <ul id="dropdown-menu">
-          <li><Link to="/podcast">Podcast</Link></li>
+          <li ><Link to="/podcast">Podcast</Link></li>
           <li><Link to="/fotografia">Fotografia</Link></li>
           <li><Link to="/pintura">Pintura</Link></li>
           <li><Link to="/comics">Cómics</Link></li>
@@ -33,6 +33,7 @@ const Menu = () => {
       </li>
       <li><a href="/">Créditos</a></li>
     </ul>
+    
   );
 };
 
