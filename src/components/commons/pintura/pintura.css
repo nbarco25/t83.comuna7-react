@@ -1,9 +1,6 @@
-.imagenes {
-    display: grid;  /* convierte el contenedor en un contenedor grid */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* crea tantas columnas como sea posible con un tamaño mínimo de 200px y un máximo de 1 fracción del espacio disponible */
-    grid-gap: 10px; /* agrega un espacio entre las imágenes */
-    width: 100%; /* asegura que la grilla se extienda a lo largo de todo el ancho de la pantalla */
-    height: 100vh; /* asegura que la grilla se extienda a lo largo de toda la altura de la pantalla */
+.fotografia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .image-small {
