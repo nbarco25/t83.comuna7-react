@@ -82,9 +82,13 @@ const Fotografia = () => {
                     </button>
                 </div>
             </div>
+            <div className="card">
+
             <div className="descripcion-columna">
-                <h1 className="font-extrabold md:text-5xl dark:text-white titulo-galeria">{nombres[currentIndex]}</h1>
-                <p className='descripcion-imagen'>{descriptions[currentIndex]}</p>
+                    <h1 className="font-extrabold md:text-5xl dark:text-white titulo-galeria">{nombres[currentIndex]}</h1>
+                    <p className='descripcion-imagen'>{descriptions[currentIndex]}</p>
+                    {/* Aquí puedes agregar más contenido de la tarjeta si es necesario */}
+                </div>
             </div>
         </div>
     );

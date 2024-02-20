@@ -1,6 +1,6 @@
 .fotografia {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 .imagen-columna {
     display: flex;
@@ -16,14 +16,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Ajusta la altura según tus necesidades */
+    margin-top: 5%;
+    height:70vh; /* Ajusta la altura según tus necesidades */
 }
 
 .carousel-button {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #3F2773;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -52,12 +53,9 @@
 }
 
 .titulo-galeria {
-    text-align: center;
-    margin-right: 50%;
-    margin-top: 100px;
-    margin-bottom: 30px;
+    text-align: left;
     color: transparent; /* Hace que el texto sea transparente */
-    background-image: linear-gradient(to right, #3F2773, #F28B0C); /* Define el gradiente de color */
+    background-image: linear-gradient(to right, #3F2773, #3F2773); /* Define el gradiente de color */
     -webkit-background-clip: text; /* Aplica el gradiente de color a las letras */
     background-clip: text; /* Aplica el gradiente de color a las letras */
 }
@@ -65,10 +63,29 @@
 
 .descripcion-imagen { 
     color: white;
-    text-align: center !important;
-    margin-right: 50%;
+    text-align: left !important;
     color: transparent; /* Hace que el texto sea transparente */
-    background-image: linear-gradient(to right, #3F2773, #F28B0C); /* Define el gradiente de color */
+    background-image: linear-gradient(to right, #3F2773, #3F2773); /* Define el gradiente de color */
     -webkit-background-clip: text; /* Aplica el gradiente de color a las letras */
     background-clip: text; /* Aplica el gradiente de color a las letras */
 }
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
+    margin-top: 25%;
+    max-width: 50%; /* Establecer un ancho máximo */
+    max-height: 50%;
+  }
+  
+  .card h1 {
+    font-size: 30px; /* Reducir el tamaño del título */
+    margin-bottom: 20px;
+  }
+  
+  .card p {
+    font-size: 14px; /* Reducir el tamaño del texto de la descripción */
+    color: #666666;
+  }
+  
