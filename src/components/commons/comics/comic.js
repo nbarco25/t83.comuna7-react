@@ -15,18 +15,16 @@ const ComicViewer = () => {
     const archivos = Object.values(pdfs);
 
     return (
-        <div className="container">
-            <h1>Biblioteca de Cómics</h1>
-            <div className="buttons">
-                {archivos.map((pdf, index) => (
-                    <button key={index} className="card">
-                        <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            Abrir cómic {index + 1}
-                        </a>
-                    </button>
-                ))}
-            </div>
-        </div>
+        <div className="button-container">
+  {archivos.map((pdf, index) => (
+    <button key={index} className="button">
+      <a href={pdf} target="_blank" rel="noopener noreferrer">
+        Abrir cómic {index + 1}
+      </a>
+    </button>
+  ))}
+</div>
+
     );
 };
 
