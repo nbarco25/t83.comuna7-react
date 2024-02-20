@@ -25,3 +25,9 @@
     width: 35px;
     
 }
+
+.contenedor-redes{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
